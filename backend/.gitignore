@@ -1,0 +1,40 @@
+# Node modules
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs
+logs
+*.log
+log.txt
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Build / Dist folders (if you create them later)
+dist/
+build/
+
+# Coverage / Test
+coverage/
+
+# Temporary files
+.tmp/
+.cache/
+
+# IDE / Editor folders
+.vscode/
+.idea/
+*.swp
+
+# Optional: MongoDB dump folder
+dump/
