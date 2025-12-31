@@ -9,6 +9,6 @@ module.exports = function (req, res, next) {
     req.user = decoded.id;
     next();
   } catch (err) {
-    return res.status(400).json({ message: "Invalid token" });
+    return res.status(400).json({ message: "Invalid token set" });
   }
 };
