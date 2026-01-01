@@ -2,6 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import connectDB from "./config/dbConnect.js";
+import bodyParser from 'body-parser';  
+import authRoute from "./routes/authRoute.js";
   
 import cors from "cors";
 
@@ -13,6 +15,7 @@ connectDB();
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors({
   origin: "http://localhost:3000",
   credentials: true
@@ -21,6 +24,8 @@ app.use(cors({
 app.get("/test", (req, res) => {
   res.send("ESM route working");
 });
+//routes
+app.use("/api/auth", authRoute);
 
 
 

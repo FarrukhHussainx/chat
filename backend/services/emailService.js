@@ -1,4 +1,8 @@
-const nodemailer = require("nodemailer");
+import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+
+dotenv.config();
+
 
 // Create a transporter using Ethereal test credentials.
 // For production, replace with your actual SMTP server details.
