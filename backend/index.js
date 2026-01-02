@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import connectDB from "./config/dbConnect.js";
 import bodyParser from 'body-parser';  
 import authRoute from "./routes/authRoute.js";
+import chatRoute from "./routes/chatRoute.js";
   
 import cors from "cors";
 
@@ -26,9 +27,7 @@ app.get("/test", (req, res) => {
 });
 //routes
 app.use("/api/auth", authRoute);
-
-
-
+app.use("/api/chat", chatRoute);
 
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
