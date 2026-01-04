@@ -11,7 +11,7 @@ export const createStatus = async (req, res) => {
 
   try {
     let mediaURL = null;
-    const finalContentType = contentType || "text";
+    let finalContentType = contentType || "text";
     if (file) {
       const uploadFile = await uploadFileCloudinary(file);
 
